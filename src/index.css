@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 👇 Анимации для PNG с эффектом покачивания, увеличения и поворота */
+@keyframes float-left {
+  0%   { transform: translateY(0) rotate(0deg) scale(1); }
+  50%  { transform: translateY(-12px) rotate(-1deg) scale(1.03); }
+  100% { transform: translateY(0) rotate(0deg) scale(1); }
+}
+
+@keyframes float-right {
+  0%   { transform: translateY(0) rotate(0deg) scale(1); }
+  50%  { transform: translateY(12px) rotate(1deg) scale(1.03); }
+  100% { transform: translateY(0) rotate(0deg) scale(1); }
+}
+
+/* 👇 Классы для Tailwind */
+.animate-float-left {
+  animation: float-left 6s ease-in-out infinite;
+  filter: blur(1px);
+}
+
+.animate-float-right {
+  animation: float-right 6s ease-in-out infinite;
+  filter: blur(1px);
+}
