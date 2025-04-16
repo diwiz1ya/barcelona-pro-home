@@ -32,6 +32,9 @@ const translations = {
     commentLabel: "Комментарий",
     commentPlaceholder: "Расскажите, что нужно сделать",
     sendRequest: "Отправить заявку",
+
+    // Новые ключи для перевода
+    partnersTitle: "Наши постоянные клиенты",
     mapTitle: "Мы на карте Барселоны",
     mapSubtitle: "Приходите к нам в офис в удобное для вас время",
 
@@ -116,6 +119,9 @@ const translations = {
     commentLabel: "Comentario",
     commentPlaceholder: "Cuéntanos qué necesitas",
     sendRequest: "Enviar solicitud",
+
+    // Nuevos claves para traducción
+    partnersTitle: "Nuestros clientes habituales",
     mapTitle: "Estamos en Barcelona",
     mapSubtitle: "Visítanos en nuestra oficina cuando quieras",
 
@@ -291,46 +297,44 @@ function App() {
         {/* Затемнение */}
         <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-60 z-10" />
         {/* Контент */}
-<div
-  className="relative z-20 p-10 rounded-2xl max-w-2xl text-center text-white animate-fade-in mt-16"
-  data-aos="fade-up"
->
-  <h1 className="text-4xl md:text-6xl font-bold mb-6">{t("heroTitle")}</h1>
-  <p className="text-lg md:text-xl mb-8">{t("heroSubtitle")}</p>
-  <div className="flex justify-center gap-4 flex-wrap">
-    
-    {/* Обновлённая кнопка */}
-    <a href="#contact">
-      <button className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-2xl font-semibold transition">
-        {t("consultBtn")}
-      </button>
-    </a>
+        <div
+          className="relative z-20 p-10 rounded-2xl max-w-2xl text-center text-white animate-fade-in mt-16"
+          data-aos="fade-up"
+        >
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">{t("heroTitle")}</h1>
+          <p className="text-lg md:text-xl mb-8">{t("heroSubtitle")}</p>
+          <div className="flex justify-center gap-4 flex-wrap">
+            {/* Обновлённая кнопка */}
+            <a href="#contact">
+              <button className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-2xl font-semibold transition">
+                {t("consultBtn")}
+              </button>
+            </a>
 
-    <a href="#about">
-      <button className="border border-white px-6 py-3 rounded-2xl font-semibold hover:bg-white hover:text-black transition">
-        {t("menu.about")}
-      </button>
-    </a>
+            <a href="#about">
+              <button className="border border-white px-6 py-3 rounded-2xl font-semibold hover:bg-white hover:text-black transition">
+                {t("menu.about")}
+              </button>
+            </a>
 
-    <a
-      href="https://wa.me/34644935269"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-flex items-center gap-2 border border-green-500 text-green-500 px-6 py-3 rounded-2xl font-semibold hover:bg-green-500 hover:text-white transition"
-    >
-      <span>WhatsApp</span>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-5 w-5"
-        viewBox="0 0 24 24"
-        fill="currentColor"
-      >
-        <path d="M20.52 3.48A11.88 11.88 0 0012 0C5.37 0 0 5.37 0 12a11.85 11.85 0 001.61 6L0 24l6.38-1.67A11.88 11.88 0 0012 24c6.63 0 12-5.37 12-12a11.85 11.85 0 00-3.48-8.52zM12 22a9.9 9.9 0 01-5.06-1.39l-.36-.21-3.79.99 1.01-3.69-.24-.38A9.9 9.9 0 012 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.3-7.7l-1.61-.46c-.21-.06-.44 0-.6.14l-.87.88a9.18 9.18 0 01-4.1-4.1l.88-.87c.14-.15.2-.39.14-.6l-.46-1.61a.48.48 0 00-.45-.35H9c-.28 0-.5.22-.5.5 0 5.25 4.25 9.5 9.5 9.5.28 0 .5-.22.5-.5v-1.39c0-.2-.14-.4-.35-.45z" />
-      </svg>
-    </a>
-  </div>
-</div>
-
+            <a
+              href="https://wa.me/34644935269"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 border border-green-500 text-green-500 px-6 py-3 rounded-2xl font-semibold hover:bg-green-500 hover:text-white transition"
+            >
+              <span>WhatsApp</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M20.52 3.48A11.88 11.88 0 0012 0C5.37 0 0 5.37 0 12a11.85 11.85 0 001.61 6L0 24l6.38-1.67A11.88 11.88 0 0012 24c6.63 0 12-5.37 12-12a11.85 11.85 0 00-3.48-8.52zM12 22a9.9 9.9 0 01-5.06-1.39l-.36-.21-3.79.99 1.01-3.69-.24-.38A9.9 9.9 0 012 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.3-7.7l-1.61-.46c-.21-.06-.44 0-.6.14l-.87.88a9.18 9.18 0 01-4.1-4.1l.88-.87c.14-.15.2-.39.14-.6l-.46-1.61a.48.48 0 00-.45-.35H9c-.28 0-.5.22-.5.5 0 5.25 4.25 9.5 9.5 9.5.28 0 .5-.22.5-.5v-1.39c0-.2-.14-.4-.35-.45z" />
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
 
       {/* About Section */}
@@ -364,241 +368,239 @@ function App() {
         </div>
       </div>
 
-     {/* Services Section */}
-<div
-  id="services"
-  className="relative text-white py-20 px-6 md:px-16 overflow-hidden"
-  data-aos="fade-up"
-  style={{
-    backgroundImage: "url('/images/kitchen.png')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}
->
-  {/* Уменьшенное затемнение — стало почти прозрачным */}
-  <div className="absolute inset-0 bg-black bg-opacity-30 z-0"></div>
+      {/* Services Section */}
+      <div
+        id="services"
+        className="relative text-white py-20 px-6 md:px-16 overflow-hidden"
+        data-aos="fade-up"
+        style={{
+          backgroundImage: "url('/images/kitchen.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        {/* Уменьшенное затемнение — стало почти прозрачным */}
+        <div className="absolute inset-0 bg-black bg-opacity-30 z-0"></div>
 
-  {/* Контент */}
-  <div className="max-w-6xl mx-auto text-center relative z-10">
-    <h2 className="text-3xl md:text-5xl font-bold mb-12">{t("ourServices")}</h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-      
-      {/* Карточка 1 */}
-      <div className="rounded-xl p-8 text-left shadow-lg backdrop-blur-sm bg-black/20">
-        <h3 className="text-2xl font-bold mb-2">{t("servicesData.aptTitle")}</h3>
-        <p className="text-lg text-white/90">{t("servicesData.aptDesc")}</p>
+        {/* Контент */}
+        <div className="max-w-6xl mx-auto text-center relative z-10">
+          <h2 className="text-3xl md:text-5xl font-bold mb-12">{t("ourServices")}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Карточка 1 */}
+            <div className="rounded-xl p-8 text-left shadow-lg backdrop-blur-sm bg-black/20">
+              <h3 className="text-2xl font-bold mb-2">{t("servicesData.aptTitle")}</h3>
+              <p className="text-lg text-white/90">{t("servicesData.aptDesc")}</p>
+            </div>
+
+            {/* Карточка 2 */}
+            <div className="rounded-xl p-8 text-left shadow-lg backdrop-blur-sm bg-black/20">
+              <h3 className="text-2xl font-bold mb-2">{t("servicesData.houseTitle")}</h3>
+              <p className="text-lg text-white/90">{t("servicesData.houseDesc")}</p>
+            </div>
+
+            {/* Карточка 3 */}
+            <div className="rounded-xl p-8 text-left shadow-lg backdrop-blur-sm bg-black/20">
+              <h3 className="text-2xl font-bold mb-2">{t("servicesData.commTitle")}</h3>
+              <p className="text-lg text-white/90">{t("servicesData.commDesc")}</p>
+            </div>
+
+            {/* Карточка 4 */}
+            <div className="rounded-xl p-8 text-left shadow-lg backdrop-blur-sm bg-black/20">
+              <h3 className="text-2xl font-bold mb-2">{t("servicesData.airconTitle")}</h3>
+              <p className="text-lg text-white/90">{t("servicesData.airconDesc")}</p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      {/* Карточка 2 */}
-      <div className="rounded-xl p-8 text-left shadow-lg backdrop-blur-sm bg-black/20">
-        <h3 className="text-2xl font-bold mb-2">{t("servicesData.houseTitle")}</h3>
-        <p className="text-lg text-white/90">{t("servicesData.houseDesc")}</p>
+      {/* Секция: Наши постоянные клиенты */}
+      <div id="partners" className="bg-[#1A1A1A] py-12 px-6 md:px-16" data-aos="fade-up">
+        <div className="max-w-6xl mx-auto text-center">
+          <p
+            className="text-2xl text-white mb-10 tracking-tight"
+            style={{ fontWeight: 1000 }}
+          >
+            {t("partnersTitle")}
+          </p>
+          <div className="flex flex-wrap justify-between items-center gap-y-8">
+            <img
+              src="/images/company1.png"
+              alt="Компания 1"
+              className="h-16 object-contain max-w-[22%] mx-auto"
+            />
+            <img
+              src="/images/company2.png"
+              alt="Компания 2"
+              className="h-16 object-contain max-w-[22%] mx-auto"
+            />
+            <img
+              src="/images/company3.png"
+              alt="Компания 3"
+              className="h-16 object-contain max-w-[22%] mx-auto"
+            />
+            <img
+              src="/images/company4.png"
+              alt="Компания 4"
+              className="h-16 object-contain max-w-[22%] mx-auto"
+            />
+          </div>
+        </div>
       </div>
-
-      {/* Карточка 3 */}
-      <div className="rounded-xl p-8 text-left shadow-lg backdrop-blur-sm bg-black/20">
-        <h3 className="text-2xl font-bold mb-2">{t("servicesData.commTitle")}</h3>
-        <p className="text-lg text-white/90">{t("servicesData.commDesc")}</p>
-      </div>
-
-      {/* Карточка 4 */}
-      <div className="rounded-xl p-8 text-left shadow-lg backdrop-blur-sm bg-black/20">
-        <h3 className="text-2xl font-bold mb-2">{t("servicesData.airconTitle")}</h3>
-        <p className="text-lg text-white/90">{t("servicesData.airconDesc")}</p>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-   {/* Секция: Наши постоянные клиенты */}
-   <div id="partners" className="bg-[#1A1A1A] py-12 px-6 md:px-16" data-aos="fade-up">
-  <div className="max-w-6xl mx-auto text-center">
-    <p
-      className="text-2xl text-white mb-10 tracking-tight"
-      style={{ fontWeight: 1000 }}
-    >
-      Наши постоянные клиенты
-    </p>
-    <div className="flex flex-wrap justify-between items-center gap-y-8">
-      <img
-        src="/images/company1.png"
-        alt="Компания 1"
-        className="h-16 object-contain max-w-[22%] mx-auto"
-      />
-      <img
-        src="/images/company2.png"
-        alt="Компания 2"
-        className="h-16 object-contain max-w-[22%] mx-auto"
-      />
-      <img
-        src="/images/company3.png"
-        alt="Компания 3"
-        className="h-16 object-contain max-w-[22%] mx-auto"
-      />
-      <img
-        src="/images/company4.png"
-        alt="Компания 4"
-        className="h-16 object-contain max-w-[22%] mx-auto"
-      />
-    </div>
-  </div>
-</div>
 
       {/* Work Process Section */}
       <div
-  id="workprocess"
-  className="relative bg-[#121212] text-white py-20 px-6 md:px-16 overflow-hidden"
-  data-aos="fade-up"
->
-  {/* PNG кондиционера поверх фона */}
-  <img
-    src="/images/aircon-overlay.png" // 👈 убедись, что путь правильный
-    alt="Кондиционер"
-    className="absolute top-[-40px] right-10 w-64 opacity-70 pointer-events-none z-0"
-  />
+        id="workprocess"
+        className="relative bg-[#121212] text-white py-20 px-6 md:px-16 overflow-hidden"
+        data-aos="fade-up"
+      >
+        {/* PNG кондиционера поверх фона */}
+        <img
+          src="/images/aircon-overlay.png" // убедитесь, что путь правильный
+          alt="Кондиционер"
+          className="absolute top-[-40px] right-10 w-64 opacity-70 pointer-events-none z-0"
+        />
 
-  <div className="max-w-6xl mx-auto text-center relative z-10">
-    <h2 className="text-3xl md:text-5xl font-bold mb-12">{t("howWeWork")}</h2>
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-      {steps.map((step, index) => (
-        <div
-          key={index}
-          className="bg-[#1E1E1E] border border-gray-700 text-white rounded-xl p-6 shadow-md backdrop-blur-sm"
-        >
-          <div className="text-4xl mb-2">{step.icon}</div>
-          <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-          <p className="text-gray-300">{step.desc}</p>
+        <div className="max-w-6xl mx-auto text-center relative z-10">
+          <h2 className="text-3xl md:text-5xl font-bold mb-12">{t("howWeWork")}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {steps.map((step, index) => (
+              <div
+                key={index}
+                className="bg-[#1E1E1E] border border-gray-700 text-white rounded-xl p-6 shadow-md backdrop-blur-sm"
+              >
+                <div className="text-4xl mb-2">{step.icon}</div>
+                <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+                <p className="text-gray-300">{step.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
-</div>
+      </div>
 
       {/* Reviews Section */}
-<div
-  id="reviews"
-  className="relative text-white py-20 px-6 md:px-16 overflow-hidden"
-  style={{
-    backgroundImage: "url('/images/wet-asphalt.jpg')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}
-  data-aos="fade-up"
->
-  {/* Верхняя оранжевая полоса */}
-  <div className="absolute top-0 left-0 w-full h-1 bg-orange-500 z-10" />
+      <div
+        id="reviews"
+        className="relative text-white py-20 px-6 md:px-16 overflow-hidden"
+        style={{
+          backgroundImage: "url('/images/wet-asphalt.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+        data-aos="fade-up"
+      >
+        {/* Верхняя оранжевая полоса */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-orange-500 z-10" />
 
-  {/* Нижние две полосы */}
-  <div className="absolute bottom-6 left-0 w-full h-1 bg-orange-500 z-10" />
-  <div className="absolute bottom-0 left-0 w-full h-1 bg-orange-500 z-10" />
+        {/* Нижние две полосы */}
+        <div className="absolute bottom-6 left-0 w-full h-1 bg-orange-500 z-10" />
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-orange-500 z-10" />
 
-  {/* Контент */}
-  <div className="max-w-5xl mx-auto text-center relative z-20">
-    <h2 className="text-3xl md:text-5xl font-bold mb-12">{t("reviewsTitle")}</h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-      {reviewsData.map((review, i) => (
-        <div
-          key={i}
-          className="bg-black/40 border border-orange-400 text-white rounded-xl p-6 shadow-lg backdrop-blur-md"
-        >
-          <p className="text-lg italic mb-4">{review.text}</p>
-          <p className="font-bold text-orange-300">{review.author}</p>
+        {/* Контент */}
+        <div className="max-w-5xl mx-auto text-center relative z-20">
+          <h2 className="text-3xl md:text-5xl font-bold mb-12">{t("reviewsTitle")}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {reviewsData.map((review, i) => (
+              <div
+                key={i}
+                className="bg-black/40 border border-orange-400 text-white rounded-xl p-6 shadow-lg backdrop-blur-md"
+              >
+                <p className="text-lg italic mb-4">{review.text}</p>
+                <p className="font-bold text-orange-300">{review.author}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
-</div>
+      </div>
 
       {/* Contact Form Section */}
-<div
-  id="contact"
-  className="relative text-white py-20 px-6 md:px-16 overflow-hidden"
-  style={{
-    backgroundImage: "url('/images/apartment-bg.jpg')", // 👈 путь к твоему фону
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}
-  data-aos="fade-up"
->
-  {/* Затемнение фона для читаемости */}
-  <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
-
-  {/* Контент поверх фона */}
-  <div className="max-w-3xl mx-auto relative z-10">
-    <h2 className="text-3xl md:text-5xl font-bold mb-6 text-center">{t("contactTitle")}</h2>
-    <p className="text-center mb-8 text-lg md:text-xl">{t("contactSubtitle")}</p>
-
-    <form className="bg-black/40 rounded-xl p-6 shadow-lg space-y-4 backdrop-blur-md">
-      <div>
-        <label className="block mb-2 font-semibold text-white" htmlFor="name">
-          {t("nameLabel")}
-        </label>
-        <input
-          id="name"
-          type="text"
-          className="w-full border border-gray-300 rounded-lg p-3 bg-white text-black focus:outline-none focus:border-orange-400"
-          placeholder={locale === "ru" ? "Ваше имя" : "Tu nombre"}
-        />
-      </div>
-      <div>
-        <label className="block mb-2 font-semibold text-white" htmlFor="phone">
-          {t("phoneLabel")}
-        </label>
-        <input
-          id="phone"
-          type="tel"
-          className="w-full border border-gray-300 rounded-lg p-3 bg-white text-black focus:outline-none focus:border-orange-400"
-          placeholder="+34 ..."
-        />
-      </div>
-      <div>
-        <label className="block mb-2 font-semibold text-white" htmlFor="message">
-          {t("commentLabel")}
-        </label>
-        <textarea
-          id="message"
-          rows="4"
-          className="w-full border border-gray-300 rounded-lg p-3 bg-white text-black focus:outline-none focus:border-orange-400"
-          placeholder={t("commentPlaceholder")}
-        ></textarea>
-      </div>
-      <button
-        type="submit"
-        className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-2xl font-semibold transition w-full"
+      <div
+        id="contact"
+        className="relative text-white py-20 px-6 md:px-16 overflow-hidden"
+        style={{
+          backgroundImage: "url('/images/apartment-bg.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+        data-aos="fade-up"
       >
-        {t("sendRequest")}
-      </button>
-    </form>
-  </div>
-</div>
+        {/* Затемнение фона для читаемости */}
+        <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
 
-     {/* Maps Section */}
-<div
-  id="map"
-  className="relative bg-[#121212] text-white py-20 px-6 md:px-16 overflow-hidden"
-  data-aos="fade-up"
->
-  {/* Статичная оранжевая полоса сверху */}
-  <div className="absolute top-0 left-0 w-full h-2 bg-orange-600 z-10" />
+        {/* Контент поверх фона */}
+        <div className="max-w-3xl mx-auto relative z-10">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-center">{t("contactTitle")}</h2>
+          <p className="text-center mb-8 text-lg md:text-xl">{t("contactSubtitle")}</p>
 
-  {/* Контент */}
-  <div className="max-w-6xl mx-auto text-center relative z-20">
-    <h2 className="text-3xl md:text-5xl font-bold mb-6">Мы на карте Барселоны</h2>
-    <p className="text-lg md:text-xl mb-8">Приходите к нам в офис в удобное для вас время</p>
-    <div className="w-full h-96 rounded-lg overflow-hidden shadow-md border border-gray-800">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.34845250794!2d2.1744136762250554!3d41.385063079262876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f3f5fd4cc9%3A0x42e9bf6e6e3c2553!2sBarcelona!5e0!3m2!1sen!2ses!4v1681595002435!5m2!1sen!2ses"
-        width="100%"
-        height="100%"
-        loading="lazy"
-        allowFullScreen
-        referrerPolicy="no-referrer-when-downgrade"
-        title="Google Map"
-      ></iframe>
-    </div>
-  </div>
-</div>
+          <form className="bg-black/40 rounded-xl p-6 shadow-lg space-y-4 backdrop-blur-md">
+            <div>
+              <label className="block mb-2 font-semibold text-white" htmlFor="name">
+                {t("nameLabel")}
+              </label>
+              <input
+                id="name"
+                type="text"
+                className="w-full border border-gray-300 rounded-lg p-3 bg-white text-black focus:outline-none focus:border-orange-400"
+                placeholder={locale === "ru" ? "Ваше имя" : "Tu nombre"}
+              />
+            </div>
+            <div>
+              <label className="block mb-2 font-semibold text-white" htmlFor="phone">
+                {t("phoneLabel")}
+              </label>
+              <input
+                id="phone"
+                type="tel"
+                className="w-full border border-gray-300 rounded-lg p-3 bg-white text-black focus:outline-none focus:border-orange-400"
+                placeholder="+34 ..."
+              />
+            </div>
+            <div>
+              <label className="block mb-2 font-semibold text-white" htmlFor="message">
+                {t("commentLabel")}
+              </label>
+              <textarea
+                id="message"
+                rows="4"
+                className="w-full border border-gray-300 rounded-lg p-3 bg-white text-black focus:outline-none focus:border-orange-400"
+                placeholder={t("commentPlaceholder")}
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-2xl font-semibold transition w-full"
+            >
+              {t("sendRequest")}
+            </button>
+          </form>
+        </div>
+      </div>
+
+      {/* Maps Section */}
+      <div
+        id="map"
+        className="relative bg-[#121212] text-white py-20 px-6 md:px-16 overflow-hidden"
+        data-aos="fade-up"
+      >
+        {/* Статичная оранжевая полоса сверху */}
+        <div className="absolute top-0 left-0 w-full h-2 bg-orange-600 z-10" />
+
+        {/* Контент */}
+        <div className="max-w-6xl mx-auto text-center relative z-20">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">{t("mapTitle")}</h2>
+          <p className="text-lg md:text-xl mb-8">{t("mapSubtitle")}</p>
+          <div className="w-full h-96 rounded-lg overflow-hidden shadow-md border border-gray-800">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.34845250794!2d2.1744136762250554!3d41.385063079262876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f3f5fd4cc9%3A0x42e9bf6e6e3c2553!2sBarcelona!5e0!3m2!1sen!2ses!4v1681595002435!5m2!1sen!2ses"
+              width="100%"
+              height="100%"
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Google Map"
+            ></iframe>
+          </div>
+        </div>
+      </div>
 
       {/* Footer Section */}
       <footer className="bg-primary text-white py-10 px-6 md:px-16 mt-16">
@@ -608,8 +610,12 @@ function App() {
             <p className="text-gray-400">© {new Date().getFullYear()} Все права защищены</p>
           </div>
           <div className="space-x-4">
-            <a href="tel:+34644935269" className="hover:underline">+34 644935269</a>
-            <a href="mailto:boychuk.rus@gmail.com" className="hover:underline">boychuk.rus@gmail.com</a>
+            <a href="tel:+34644935269" className="hover:underline">
+              +34 644935269
+            </a>
+            <a href="mailto:boychuk.rus@gmail.com" className="hover:underline">
+              boychuk.rus@gmail.com
+            </a>
           </div>
         </div>
       </footer>
